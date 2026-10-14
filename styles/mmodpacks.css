@@ -1,0 +1,99 @@
+/* ---------------------- */
+/* - M.modpacks content - */
+/* ---------------------- */
+
+.mmodpacks-content {
+    display: flex;
+    justify-content: center;
+
+    padding-top: 12vh;
+}
+
+.mmodpacks-content__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header */
+.mmodpacks-header {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    /* gap: 2.5vh; */
+}
+
+.mmodpacks-header__title {
+    color: #c4cad1;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: medium;
+}
+
+.mmodpacks-header__mark {
+    background-image: radial-gradient(circle at center -250%, rgba(117, 123, 132, 1) 50%, rgba(237, 237, 237, 1) 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.mmodpacks-header__description {
+    color: #c5cbd3;
+    font-size: 17px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 165%;
+}
+
+/* Buttons */
+.mmodpacks-button__container {
+    display: flex;
+    align-items: center;
+
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.mmodpacks__download-link {
+    margin-right: 13px;
+    padding: 15px 30px;
+
+    color: #1E1F21;
+    background-color: #FAFBFD;
+    transition-duration: 0.2s;
+}
+
+.mmodpacks__download-link:hover {
+    background-color: #cdd1d8;
+    transition-duration: 0.2s;
+}
+
+.mmodpacks__show-modlist-link {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-right: 21px;
+    padding: 15px 23px;
+
+    color: #FAFBFD;
+    border: 1px solid #7c8286;
+    transition-duration: 0.2s;
+}
+
+.mmodpacks__show-modlist-link:hover {
+    border: 1px solid #FAFBFD;
+    transition-duration: 0.2s;
+}
+
+.mmodpacks__tutorial-link {
+    color: #c5cbd3;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    transition-duration: 0.1s;
+}
+
+.mmodpacks__tutorial-link:hover {
+    color: #FAFBFD;
+    transition-duration: 0.1s;
+}

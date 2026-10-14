@@ -1,0 +1,123 @@
+/* ---- Шрифты ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+::selection {
+    background-color: #c1c5cc;
+    color: #1E1F21;
+}
+
+/* ---- Фон ------------ */
+body {
+    background-image: url(../imgs/general/Технопираты95-90.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+
+/* ---- Контейнер содержимого ---- */
+.content-container {
+    width: calc(1366px + 6%);
+    min-width: 320px;
+    padding: 0 3%;
+    justify-self: center;
+}
+
+/* ---- Типографика ---- */
+
+h1 {
+    color: #FAFBFD;
+    /* font-size: 96px; 3.75vw */
+    font-size: clamp(72px, 96px, 5vw);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    line-height: 105%;
+}
+
+p {
+    color: #D2D2D2;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+a {
+    color: #D2D2D2;
+}
+
+a:visited {
+    color: #c9c9c9;
+}
+
+a:hover {
+    filter: brightness(110%);
+}
+
+/* ---------------------- */
+/* Навигация по страницам */
+/* ---------------------- */
+
+.page-nav {
+    display: flex;
+    justify-content: center;
+
+    height: 61px; /* 4.24vh */
+    width: 100%;
+
+    border-bottom: 1px solid #313235;
+    background-color: rgba(11, 12, 15, 0.5);
+}
+
+.page-nav__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ---- Лого ---- */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+} 
+
+.logo-container:hover {filter: brightness(97%);}
+
+.logo-text {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+}
+
+.logo-text-light {
+    color: #FAFBFD;
+    font-weight: bold;
+}
+
+.logo-text-dark {
+    /* Градиент для текста*/
+    background-image: linear-gradient(89deg,rgba(190, 190, 190, 1) 0%, rgba(88, 88, 88, 1) 100%);
+    background-clip: text;
+    color: transparent;
+
+    font-weight: regular;
+}
+
+/* ---- Ссылки на страницы ---- */
+.nav-link__container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    color: #D2D2D2;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: medium;
+}
+
+.logo-end {
+    border: 1px solid #313235;
+    padding: 7px; padding-top: 5px;
+
+    color: #808790;
+    font-size: 10px;
+
+    user-select: none;
+}
