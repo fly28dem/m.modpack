@@ -13,6 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 6%;
 }
 
 /* Header */
@@ -38,7 +39,7 @@
 
 .mmodpacks-header__description {
     color: #c5cbd3;
-    font-size: 17px;
+    font-size: 18px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     line-height: 165%;
@@ -96,4 +97,167 @@
 .mmodpacks__tutorial-link:hover {
     color: #FAFBFD;
     transition-duration: 0.1s;
+}
+
+/* Секция с карточками */
+.mmodpacks__cards-section {
+    display: flex;
+    flex-direction: column;
+    /* gap: 33px; */
+    padding: 5px;
+    width: 479px;
+
+    /* background-color: red; */
+}
+
+.cards-section__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.3vh;
+
+    color: #EFEFEF;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+}
+
+/* Список карт */
+.mmodpacks-cards {
+    position: relative;
+
+    /* width: 479px; */
+    min-width: 390px;
+    height: 312px;
+    padding: 11px;
+    margin-top: 33px;
+
+    /* background-color: green; */
+}
+
+/* Карточка */
+.mmodpacks-card {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /* width: 405px; */
+    width: 85%;
+    height: 243px;
+    padding: 31px 31px 13px 17px;
+
+    border-radius: 3px;
+}
+
+.mmodpacks-card__header {
+    font-size: 9px;
+}
+
+.mmodpacks-card__content {
+    padding-right: 33px;
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.mmodpacks-card__footer {
+    font-size: 9px;
+}
+
+.mmodpacks-card__line {
+    background-color: #5F6269;
+    height: 1px;
+    margin-top: 15px; 
+}
+
+.mmodpacks-card__line-1 {
+    margin-bottom: 19px;
+}
+
+.mmodpacks-card__line-2 {
+    margin-bottom: 13px;
+}
+
+/* Технопираты */
+.mmodpacks-card__technopirates {
+    z-index: 2;
+    left: 0px;
+    top: 40px;
+
+    color: #C4C9CE;
+    font-family: "Pixelify Sans", sans-serif;
+
+    transform: rotate(5deg);
+    border: 1px solid #D0D0D0;
+
+    background-image: url(../imgs/mmodpacks/technopirates-background.jpg);
+}
+
+/* Космос вместо майнкрафт */
+.mmodpacks-card__kosmosvmesto {
+    z-index: 1;
+    left: 25px;
+    top: 20px;
+    padding-top: 19px;
+
+    color: #434950;
+    font-family: 'Inter', sans-serif;
+
+    transform: rotate(6deg);
+    border: 1px solid #D0D0D0;
+
+    background-image: url(../imgs/mmodpacks/kosmosvmesto-background.jpg);
+}
+
+.mmodpacks-card__kosmosvmesto .mmodpacks-card__header {
+    font-weight: 700;
+}
+
+.mmodpacks-card__kosmosvmesto .mmodpacks-card__content {
+    color: #151619;
+    font-size: 32px;
+    font-weight: 750;
+    line-height: 100%;
+}
+
+.card-kosmosvmesto__header-mark {
+    background-image: radial-gradient(circle at center -250%, rgb(67, 73, 80) 50%, rgb(86, 93, 102) 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.mmodpacks-card__footer {
+    font-weight: 500;
+}
+
+.kosmosvmesto__footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kosmosvmesto__footer-logo {
+    color: #16171B;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.mmodpacks-card__kosmosvmesto .mmodpacks-card__line-1 {
+    margin-top: 11px; margin-bottom: 15px;
+}
+
+/* Карточка "Other" */
+.mmodpacks-card__other {
+    z-index: 0;
+    left: 50px;
+    top: 0px;
+
+    color: #C4C9CE;
+    font-family: "Pixelify Sans", sans-serif;
+
+    transform: rotate(7deg);
+    border: 1px solid #6D6D6D;
+
+    background-image: url(../imgs/mmodpacks/other-background.jpg);
 }
