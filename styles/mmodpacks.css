@@ -73,6 +73,7 @@
     display: flex;
     align-items: center;
     gap: 9px;
+    min-width: 157px;
 
     margin-right: 21px;
     padding: 15px 23px;
@@ -88,6 +89,8 @@
 }
 
 .mmodpacks__tutorial-link {
+    min-width: 102px;
+
     color: #c5cbd3;
     text-decoration: underline;
     text-underline-offset: 5px;
@@ -182,7 +185,7 @@
 /* Технопираты */
 .mmodpacks-card__technopirates {
     z-index: 2;
-    left: 0px;
+    left: calc(0px + 0.3vw);
     top: 40px;
 
     color: #C4C9CE;
@@ -197,7 +200,7 @@
 /* Космос вместо майнкрафт */
 .mmodpacks-card__kosmosvmesto {
     z-index: 1;
-    left: 25px;
+    left: calc(25px + 0.3vw);
     top: 20px;
     padding-top: 19px;
 
@@ -250,7 +253,7 @@
 /* Карточка "Other" */
 .mmodpacks-card__other {
     z-index: 0;
-    left: 50px;
+    left: calc(50px + 0.3vw);
     top: 0px;
 
     color: #C4C9CE;
@@ -260,4 +263,82 @@
     border: 1px solid #6D6D6D;
 
     background-image: url(../imgs/mmodpacks/other-background.jpg);
+}
+
+/* Слайдер с описанием */
+.mmodpacks__slider-container {
+    height: 201px;
+    margin-top: 4vh;
+    /* margin-top: 55px; */
+}
+
+.mmodpacks__slider-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 25px;
+    text-align: center;
+
+    border-bottom: 1px solid #B2B8C1;
+    color: #B2B8C1;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: medium;
+}
+
+.mmodpacks__slider-list li {
+    padding: 19px 0;
+}
+
+#mmodpacks__slider-item_active {
+    border-bottom: 2px solid #B2B8C1;
+}
+
+.mmodpacks__slider-title {
+    color: #B2B8C1;
+    font-size: 10px;
+    font-family: 'Intel One Mono';
+    font-weight: medium;
+}
+
+.mmodpacks__slider-header {
+    margin-top: 15px; margin-bottom: 18px;
+
+    color: #B2B8C1;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+}
+
+.mmodpacks__slider-description {
+    max-width: 300px;
+    margin-bottom: 21px;
+
+    color: #B2B8C1;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 165%;
+}
+
+.mmodpacks__slider-link {
+    color: #B2B8C1;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+
+
+    text-decoration: underline;
+    text-underline-offset: 7px;
+}
+
+.mmodpacks__slider-link div {
+    display: inline-block;
+    margin-left: 13px;
+
+    padding-bottom: 3px;
+    border-bottom: 1px solid #B2B8C1;
+}
+
+.mmodpacks__slider-link span {
+    display: inline-block;
+    transform: rotate(-45deg);
 }
