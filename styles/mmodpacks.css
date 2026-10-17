@@ -6,7 +6,11 @@
     display: flex;
     justify-content: center;
 
-    padding-top: 12vh;
+    margin-top: 12vh;
+}
+
+@media (max-width: 1925px) {
+    .mmodpacks-content { margin-top: 7vh;}
 }
 
 .mmodpacks-content__container {
@@ -112,7 +116,7 @@
     flex-direction: column;
     /* gap: 33px; */
     padding: 5px;
-    width: 479px;
+    width: 489px;
 
     /* background-color: red; */
 }
@@ -151,13 +155,14 @@
     /* width: 405px; */
     width: 85%;
     height: 243px;
-    padding: 31px 31px 13px 17px;
+    padding: 25px 31px 13px 17px;
 
     border-radius: 3px;
 }
 
 .mmodpacks-card__header {
     font-size: 9px;
+    font-weight: lighter;
 }
 
 .mmodpacks-card__content {
@@ -170,6 +175,7 @@
 
 .mmodpacks-card__footer {
     font-size: 9px;
+    font-weight: lighter;
 }
 
 .mmodpacks-card__line {
@@ -190,7 +196,7 @@
 .mmodpacks-card__technopirates {
     z-index: 2;
     left: calc(0px + 0.3vw);
-    top: 40px;
+    top: 30px;
 
     color: #C4C9CE;
     font-family: "Pixelify Sans", sans-serif;
@@ -205,7 +211,7 @@
 .mmodpacks-card__kosmosvmesto {
     z-index: 1;
     left: calc(25px + 0.3vw);
-    top: 20px;
+    top: 15px;
     padding-top: 19px;
 
     color: #434950;
@@ -272,7 +278,7 @@
 /* Слайдер с описанием */
 .mmodpacks__slider-container {
     height: 201px;
-    margin-top: 4vh;
+    margin-top: 2vh;
     /* margin-top: 55px; */
 }
 
@@ -344,24 +350,29 @@
 }
 
 .mmodpacks__slider-link {
+    color: #e5e6e9;
     font-size: 12px;
     font-family: 'Inter', sans-serif;
-    font-weight: 500;
-
-    text-decoration: underline;
-    text-underline-offset: 5px;
-    text-decoration-color: #6d6f74;
+    font-weight: 400;
 }
 
-.mmodpacks__slider-link div {
+.link-underline div {
     display: inline-block;
-    margin-left: 13px;
-
     padding-bottom: 2px;
     border-bottom: 1px solid #6d6f74;
+    transition-duration: 0.1s;
 }
 
-.mmodpacks__slider-link span {
+.link-underline:hover div {
+    border-bottom: 1px solid #e5e6e9;
+    transition-duration: 0.1s;
+}
+
+.link-icon {
+    margin-left: 13px;
+}
+
+.link-icon span {
     display: inline-block;
     transform: rotate(-45deg);
 }
