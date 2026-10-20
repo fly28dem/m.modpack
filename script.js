@@ -18,15 +18,27 @@ window.addEventListener('mousemove', (event) => {
     mouseY = event.clientY;
 });
 
+let lastAngleDegrees = 0;
+
 function swordFollow() {
     // расстояние между курсором и мечом
-    const dx = mouseX - swordX;
-    const dy = mouseY - swordY;
+    let dx = mouseX - swordX;
+    let dy = mouseY - swordY;
 
     // возвращает угол от -PI до PI (на основе расстояния между курсором и мечом)
-    const angleRadians = Math.atan2(dy, dx);
+    let angleRadians = Math.atan2(dy, dx);
     // угол в радианах переводим в градусы (и +45, потому что текстура наклонена)
-    const angleDegrees = angleRadians * (180 / Math.PI) + 45;
+    let angleDegrees = angleRadians * (180 / Math.PI) + 45;
+
+    // сглаживание скачков на 360 градусов
+    let angleDiff = angleDegrees - (lastAngleDegrees % 360);
+    if (angleDiff > 180) {
+        angleDegrees -= 360;
+    } else if (angleDiff < 180) {
+        angleDegrees += 360;
+    }
+
+    lastAngleDegrees += (angleDegrees - lastAngleDegrees) * 0.15;
 
     // торможение при приближении
     swordX += dx * 0.04;

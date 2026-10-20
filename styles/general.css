@@ -168,16 +168,22 @@ a:hover {
 /* ------- Подвал ------- */
 /* ---------------------- */
 
-.footer{margin-top: 25vh;}
+.footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 26.5vh;
+    padding: 0 3%;
+}
 
 @media (max-width: 1921px) {
-    .footer{margin-top: 9vh;}
+    .footer{margin-top: 8.5vh;}
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     padding: 37px 0;
+    width: 1366px;
 
     border-top: 1px solid #313235;
     color: #D2D2D2;
@@ -192,6 +198,10 @@ a:hover {
     height: 100%;
 }
 
+.footer__social-media img {
+    height: 20px;
+}
+
 .footer__social-media li a {
     display: flex;
     align-items: center;
@@ -199,7 +209,14 @@ a:hover {
 }
 
 .footer__social-media li a span {
-    padding-bottom: 3px;
+    color: #7e818a;
+    font-family: 'Intel One Mono', sans-serif;
+    text-transform: uppercase;
+    /* padding-bottom: 3px; */
+}
+
+.footer__social-media a:hover span {
+    color: #a3a6ac;
 }
 
 
@@ -217,5 +234,5 @@ a:hover {
     left: 0;
     pointer-events: none; 
     will-change: transform; /* для плавности */
-    transition-duration: 0.15s;
+    /* transition-duration: 0.15s; */
 }
