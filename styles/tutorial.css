@@ -1,0 +1,107 @@
+/* Шапка */
+
+.main-header h1 {
+    margin-top: 35px;
+    line-height: 130%;
+}
+
+.tutorial-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.tutorial-h1-img-container {
+    display: flex;
+    align-items: end;
+    gap: 4.5vw;
+    /* padding-bottom: 3vh; */
+}
+
+.tutorial-h1-img-container img {
+    height: 246px;
+    padding-bottom: 2%;
+}
+
+@media (max-width: 1821px) {
+    .tutorial-h1-img-container img {
+        height: 22vh;
+    }
+}
+
+.tutorial-h1-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Сетка с инструкцией по установке */
+.tutorial-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 35px;
+    padding: 0;
+}
+
+.tutorial-grid div {
+    min-height: 281px;
+    padding: 10px;
+    border: 1px solid rgb(104, 104, 104);
+}
+
+.tutorial-grid h2 {
+    margin-bottom: 35px;
+
+    color: #d2d2d2;
+    font-size: 24px;
+    font-family: 'Intel One Mono', monospace;
+    font-weight: bold;
+    line-height: 155%;
+}
+
+.tutorial-grid p {
+    padding-right: 45%;
+
+    color: #B3B3B3;
+    font-size: 12px;
+    font-family: 'Intel One Mono', monospace;
+    font-weight: 400;
+    line-height: 155%;
+}
+
+.tutorial-grid a {
+    color: #ededed;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.tutorial-grid i {
+    color: #e2e2e2;
+    font-style: normal;
+}
+
+@media (max-width: 1320px) {
+    .tutorial-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 3.5vh;
+        /* background-color: red; */
+    }
+    .tutorial-grid div {
+        padding: 5%;
+    }
+    .tutorial-grid p {
+        padding-right: 25%;
+    }
+}
+
+@media (max-width: 575px) {
+    .tutorial-grid {
+        grid-template-columns: 1fr;
+        gap: 1%;
+    }
+    .tutorial-grid div {
+        padding: 5%;
+    }
+    .tutorial-grid p {
+        padding-right: 25%;
+    }
+}

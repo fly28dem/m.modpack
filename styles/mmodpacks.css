@@ -376,3 +376,16 @@
     display: inline-block;
     transform: rotate(-45deg);
 }
+
+/* Подвал дальше */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 26.3vh;
+    padding: 0 3%;
+}
+
+@media (max-width: 1921px) {
+    .footer{margin-top: 8.5vh;}
+}

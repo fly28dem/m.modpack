@@ -1,16 +1,29 @@
 /* ---- Шрифты ---------- */
 @import url('https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pixelify+Sans:wght@400..700&display=swap');
 
+/* Выделение текста */
 ::selection {
     background-color: #c1c5cc;
     color: #1E1F21;
+}
+
+/* Скролбар */
+::-webkit-scrollbar {
+    background-color: rgba(11, 12, 15, 1);
+    border-left: 1px solid #313235;
+    width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(104, 104, 104);
 }
 
 /* ---- Фон ------------ */
 body {
     background-image: url(../imgs/general/Технопираты95-90.jpg);
     background-size: 100%;
-    background-position: center;
+    background-position: bottom;
+    background-attachment: fixed;
 }
 
 /* ---- Контейнер содержимого ---- */
@@ -21,38 +34,14 @@ body {
     justify-self: center;
 }
 
-/* ---- Типографика ---- */
-
-h1 {
-    color: #FAFBFD;
-    /* font-size: 96px; 3.75vw */
-    font-size: clamp(72px, 96px, 5vw);
-    font-family: 'Inter', sans-serif;
-    font-weight: bold;
-    line-height: 105%;
-}
-
-p {
-    color: #D2D2D2;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-}
-
-a {
-    color: inherit;
-}
-
-a:hover {
-    filter: inherit;
-}
-
 /* ---------------------- */
 /* Навигация по страницам */
 /* ---------------------- */
 
 .page-nav {
+    position: sticky;
+    top: 0;
+
     display: flex;
     justify-content: center;
 
@@ -61,6 +50,7 @@ a:hover {
 
     border-bottom: 1px solid #313235;
     background-color: rgba(11, 12, 15, 0.5);
+    backdrop-filter: blur(50px);
 }
 
 .page-nav__container {
@@ -164,14 +154,99 @@ a:hover {
 
     user-select: none;
 }
+
+/* ---------------------- */
+/* - Содержимое страниц - */
+/* ---------------------- */
+
+.main-content {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 12vh;
+}
+
+@media (max-width: 1925px) {
+    .main-content { margin-top: 9vh;}
+}
+
+/* @media (max-width: 900px) {
+    .main-content { background-color: red;}
+} */
+
+.main-content__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6%;
+}
+
+/* Шапка */
+.main-header {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    /* gap: 2.5vh; */
+}
+
+.main-header__title {
+    color: #c4cad1;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: medium;
+}
+
+.main-header__mark {
+    background-image: radial-gradient(circle at center -250%, rgba(117, 123, 132, 1) 50%, rgba(237, 237, 237, 1) 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.main-header__description {
+    color: #c5cbd3;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 165%;
+}
+
+/* ---------------------- */
+/* ----- Типографика ---- */
+/* ---------------------- */
+
+h1 {
+    color: #FAFBFD;
+    /* font-size: 96px; 3.75vw */
+    font-size: clamp(72px, 96px, 5vw);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    line-height: 105%;
+}
+
+p {
+    color: #D2D2D2;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    filter: inherit;
+}
+
 /* ---------------------- */
 /* ------- Подвал ------- */
 /* ---------------------- */
 
-.footer{
+.footer {
     display: flex;
     justify-content: center;
-    margin-top: 26.5vh;
+    margin-top: 7vh;
     padding: 0 3%;
 }
 
