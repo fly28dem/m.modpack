@@ -133,6 +133,7 @@
 }
 
 /* Список карт */
+
 .mmodpacks-cards {
     position: relative;
 
@@ -142,11 +143,15 @@
     padding: 11px;
     margin-top: 33px;
 
+    transition: 0.35s;
+
     /* background-color: green; */
 }
 
 /* Карточка */
 .mmodpacks-card {
+    --pos: 0; /* 0 - верхняя, 1 - средняя, 2 - нижняя */
+    inset: 0;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -158,6 +163,24 @@
     padding: 25px 31px 13px 17px;
 
     border-radius: 3px;
+
+    /* всё зависит от --pos */
+    z-index: calc(10 - var(--pos));
+    opacity: calc(1 - var(--pos) * 0.1);
+    transform:
+        translateX(calc(var(--pos) * 35px))
+        translateY(35px)
+        translateY(calc(var(--pos) * -25px))
+        scale(calc(1 - var(--pos) * 0.07))
+        rotate(calc(var(--pos) * 2deg));
+        /* rotate(10deg); */
+    filter: brightness(calc(1 - var(--pos) * 0.15));
+
+    transition:
+        opacity 0.35s ease-in-out,
+        transform 0.55s cubic-bezier(.22, 1, .36, 1),
+        filter 0.55s ease;
+    /* will-change: transform; */
 }
 
 .mmodpacks-card__header {
@@ -194,14 +217,13 @@
 
 /* Технопираты */
 .mmodpacks-card__technopirates {
-    z-index: 2;
-    left: calc(0px + 0.3vw);
-    top: 30px;
+    /* left: calc(0px + 0.3vw); */
+    /* top: 30px; */
 
     color: #C4C9CE;
     font-family: "Pixelify Sans", sans-serif;
 
-    transform: rotate(5deg);
+    /* transform: rotate(5deg); */
     border: 1px solid #D0D0D0;
 
     background-image: url(../imgs/mmodpacks/technopirates-background.jpg);
@@ -209,15 +231,15 @@
 
 /* Космос вместо майнкрафт */
 .mmodpacks-card__kosmosvmesto {
-    z-index: 1;
-    left: calc(25px + 0.3vw);
-    top: 15px;
+    /* left: calc(25px + 0.3vw); */
+    
+    /* top: 15px; */
     padding-top: 19px;
 
     color: #434950;
     font-family: 'Inter', sans-serif;
 
-    transform: rotate(6deg);
+    /* transform: rotate(6deg) translateX(calc(25px + 0.3vw)); */
     border: 1px solid #D0D0D0;
 
     background-image: url(../imgs/mmodpacks/kosmosvmesto-background.jpg);
@@ -262,27 +284,27 @@
 
 /* Карточка "Other" */
 .mmodpacks-card__other {
-    z-index: 0;
-    left: calc(50px + 0.3vw);
-    top: 0px;
+    /* left: calc(50px + 0.3vw); */
+    /* top: 0px; */
 
     color: #C4C9CE;
     font-family: "Pixelify Sans", sans-serif;
 
-    transform: rotate(7deg);
+    /* transform: rotate(7deg); */
     border: 1px solid #6D6D6D;
 
     background-image: url(../imgs/mmodpacks/other-background.jpg);
 }
 
-/* Слайдер с описанием */
-.mmodpacks__slider-container {
+/* Табы */
+
+.mmodpacks__tab-container {
     height: 201px;
     margin-top: 2vh;
     /* margin-top: 55px; */
 }
 
-.mmodpacks__slider-list {
+.mmodpacks__tab-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 25px;
@@ -295,42 +317,64 @@
     font-weight: medium;
 }
 
-
-.mmodpacks__slider-list li {
+.mmodpacks-tab {
     padding: 17px 0;
     font-weight: 400;
     transition-duration: 0.2s;
 }
 
-.mmodpacks__slider-list li:hover {
+.mmodpacks-tab:hover {
     color: #e4e6eb;
     background-color: rgba(37, 37, 37, 0.5);
     cursor: pointer;
     transition-duration: 0.2s;
 }
 
-.mmodpacks__slider-list a {
+.mmodpacks__tab a {
     color: inherit;
 }
 
-.mmodpacks__slider-list a:hover {
+.mmodpacks__tab a:hover {
     filter: brightness(100%);
 }
 
-#mmodpacks__slider-item_active {
+/* Выбранный таб */
+.mmodpacks-tab[aria-selected="true"] {
     color: #e4e6eb;
     border-bottom: 2px solid #e4e6eb;
     font-weight: 500;
 }
 
-.mmodpacks__slider-title {
+/* Панели */
+
+.mmodpacks-panels {
+    display: grid;
+}
+
+.mmodpacks-panel {
+    grid-area: 1/1;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.05s ease, visibility 0.05s;
+}
+
+/* Активная панель */
+.mmodpacks-panel.active {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    transition: 0.35s, 0.35s, 0.35s;
+}
+
+.mmodpacks__panel-title {
     color: #8b8d91;
     font-size: 10px;
     font-family: 'Intel One Mono';
     font-weight: medium;
 }
 
-.mmodpacks__slider-header {
+.mmodpacks__panel-header {
     margin-top: 1vh; margin-bottom: 1.2vh;
 
     color: #e5e6e9;
@@ -338,7 +382,7 @@
     font-family: 'Inter', sans-serif;
 }
 
-.mmodpacks__slider-description {
+.mmodpacks__panel-description {
     max-width: 300px;
     margin-bottom: 1.4vh;
 
@@ -349,7 +393,7 @@
     line-height: 165%;
 }
 
-.mmodpacks__slider-link {
+.mmodpacks__panel-link {
     color: #e5e6e9;
     font-size: 12px;
     font-family: 'Inter', sans-serif;

@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M.Modpack — Главная</title>
+    <title>M.Modpack — главная</title>
+
+    <link rel="icon" href="./imgs/general/logo-img.png">
 
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/general.css">
@@ -64,6 +66,7 @@
                     <img src="./imgs/mmodpacks/our-modpacks__icon.png" alt="our modpacks icon" />
                 </div>
 
+                <!-- Карты -->
                 <ul class="mmodpacks-cards">
                     <li class="mmodpacks-card mmodpacks-card__technopirates">
                         <div>
@@ -82,10 +85,10 @@
                             <span class="mmodpacks-card__footer">Big machines await you.</span>
                         </div>
                     </li>
-
+                    
                     <li class="mmodpacks-card mmodpacks-card__kosmosvmesto">
                         <div>
-                            <span class="mmodpacks-card__header">m.modpacks.github.io/космосвместомайнкрафта.zip</span>
+                            <span class="mmodpacks-card__header">m.modpacks.github.io/kosmosvmesto.zip</span>
                             <hr class="mmodpacks-card__line mmodpacks-card__line-1">
 
                             <h1 class="mmodpacks-card__content">
@@ -98,7 +101,7 @@
                         <div>
                             <hr class="mmodpacks-card__line mmodpacks-card__line-2">
                             <div class="kosmosvmesto__footer-container">
-                                <span class="mmodpacks-card__footer">Междумировые приключения и индустриализм</span>
+                                <span class="mmodpacks-card__footer">Межмировые приключения и индустриализм</span>
                                 <span class="kosmosvmesto__footer-logo">M.M</span>
                             </div>
                         </div>
@@ -106,33 +109,56 @@
 
                     <li class="mmodpacks-card mmodpacks-card__technopirates mmodpacks-card__other">
                         <div>
-                            <span class="mmodpacks-card__header">other/...</span>
+                            <span class="mmodpacks-card__header">other/...coming soon!</span>
                             <hr class="mmodpacks-card__line mmodpacks-card__line-1">
 
                             <ul class="mmodpacks-card__content">
-                                <li>...</li>
+                                <li> There is still room here for one more assembly. What will it be about? Unknown.</li>
+                                <li>What is known is that this is a place for a special assembly. One day it will happen.<br/><br/></li>
+                                <li>However, this does not mean that there are only two assemblies. Check out the rest on modpacks! (button below)</li>
                             </ul>
                         </div>
 
                         <div>
-                            <hr class="mmodpacks-card__line mmodpacks-card__line-2">
-                            <span class="mmodpacks-card__footer">...</span>
+                            <hr class="mmodpacks-card__line mmodpacks-card__line-2" style="margin-bottom: 7px;">
+                            <span class="mmodpacks-card__footer">Have a nice game</span>
                         </div>
                     </li>
                 </ul>
-
-                <div class="mmodpacks__slider-container">
-                    <ul class="mmodpacks__slider-list">
-                        <li id="mmodpacks__slider-item_active"><a>Technopirates</a></li>
-                        <li><a>Kosmos</a></li>
-                        <li><a>Other</a></li>
+                
+                <div class="mmodpacks__tab-container">
+                    <ul class="mmodpacks__tab-list">
+                        <li class="mmodpacks-tab"><a>Technopirates</a></li>
+                        <li class="mmodpacks-tab"><a>Kosmos</a></li>
+                        <li class="mmodpacks-tab"><a>Other</a></li>
                     </ul>
-                    <span class="mmodpacks__slider-title">Other modpacks · Will there be?</span>
-                    <h2 class="mmodpacks__slider-header">Website foundation.</h2>
-                    <p class="mmodpacks__slider-description">
-                        For now, there are two builds on my site; others may appear here in the future.
-                    </p>
-                    <a class="mmodpacks__slider-link link-underline" href="./index.html"><div>Open modlist</div><div class="link-icon"><span>-></span></div></a>
+                    <div class="mmodpacks-panels">
+                        <div class="mmodpacks-panel">
+                            <span class="mmodpacks__panel-title">Technopirates · Finally</span>
+                            <h2 class="mmodpacks__panel-header">This is us. 3-TID-3 pirates.</h2>
+                            <p class="mmodpacks__panel-description">
+                                Sorry for the long wait.
+                                I tried to please everyone in terms of mods)
+                            </p>
+                            <a class="mmodpacks__panel-link link-underline" href="./index.html"><div>Show mods</div><div class="link-icon"><span>-></span></div></a>
+                        </div>
+                        <div class="mmodpacks-panel">
+                            <span class="mmodpacks__panel-title">Kosmosvmesto · Are you ready?</span>
+                            <h2 class="mmodpacks__panel-header">Hello, dear!</h2>
+                            <p class="mmodpacks__panel-description">
+                                This is the build for you! Don't forget about our vanilla. And forgive me for the past world
+                            </p>
+                            <a class="mmodpacks__panel-link link-underline" href="./index.html"><div>Open modlist</div><div class="link-icon"><span>-></span></div></a>
+                        </div>
+                        <div class="mmodpacks-panel active">
+                            <span class="mmodpacks__panel-title">Other modpacks · Will there be?</span>
+                            <h2 class="mmodpacks__panel-header">Coming soon...</h2>
+                            <p class="mmodpacks__panel-description">
+                                I think a new modpack will appear here soon! 
+                            </p>
+                            <a class="mmodpacks__panel-link link-underline" href="./index.html"><div>Modpacks</div><div class="link-icon"><span>-></span></div></a>
+                        </div>
+                    </div>
                 </div>
 
             </section>
@@ -175,6 +201,7 @@
     <div class="sword-follower"></div>
 
     <script src="./script.js"></script>
+    <script src="./mmodpacks.js"></script>
 </body>
 
 
