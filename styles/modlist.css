@@ -1,0 +1,294 @@
+.header__mark {
+	background-image: linear-gradient(90deg, rgba(91, 91, 91, 1) 5%, rgba(237, 237, 237, 1) 50%, rgba(126, 126, 126, 1) 95%);
+}
+
+/* ---------------------- */
+/* ------- Фильтры ------ */
+/* ---------------------- */
+
+/* Контейнер панели */
+.filter {
+    display: flex;
+    align-items: center;
+	gap: 27px;
+
+	margin-top: calc(33px + 5vh);
+	font-family: 'Inter';
+}
+
+/* Группа фильтров слева */
+.filter__dropdowns {
+	display: flex;
+	gap: 27px;
+}
+
+/* Выпадающие списки */
+.filter-dropdown {
+	height: 56px;
+	display: inline-flex;
+	align-items: center;
+	gap: 15px;
+	padding: 0 21px;
+
+	background: none;
+	color: #FAFBFD;
+	border: 2px solid #FAFBFD;
+
+	font-size: 16px;
+	font-family: inherit;
+	cursor: pointer;
+}
+
+/* Поле поиска */
+.search-field {
+	display: flex;
+	align-items: center;
+	flex: 1; /* на всю оставшуюся ширину */
+	gap: 15px;
+	height: 56px;
+	border: 2px solid #FAFBFD;
+	padding: 0 19px;
+}
+
+.search-input {
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #FAFBFD;
+
+	font-size: 16px;
+	font-family: inherit;
+}
+
+.search-input::placeholder {
+  	color: #8c8f94;
+}
+
+/* ---------------------- */
+/* ------ Категории ----- */
+/* ---------------------- */
+
+/* Категория */
+.mod-category__header {
+	margin-top: calc(54px + 2.25vh);
+	padding: 15px 0 38px 0;
+
+	border-top: 1px solid #EDEDED;
+	border-bottom: 1px solid #EDEDED;
+}
+
+/* Бровь категории */
+.mod-category__eyebrow {
+	font-size: 20px;
+	font-weight: 400;
+	margin-bottom: 50px;
+}
+
+/* Название категории */
+.mod-category__title {
+	color: #EDEDED;
+	font-size: 48px;
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+}
+
+/* ---------------------- */
+/* ------ Карточка ------ */
+/* ---------------------- */
+
+/* Сетка модовых карточек */
+.mod-grid {
+	display: grid;
+	grid-template-columns: 330px 330px 330px;
+	justify-content: space-between;
+}
+
+/* Контейнер карточки */
+.mod-card-container {
+	margin-top: calc(60px + 5vh);
+
+	display: grid;
+	grid-template-rows: 180px 1fr 0fr;
+	/* flex-direction: column; */
+	max-width: 320px;
+
+	color: #ffffff;
+	font-family: 'Inter', sans-serif;
+}
+
+/* Шапка возле карточки */
+.mod-card-container__header {
+  	padding: 3px;
+}
+
+/* Название возле карточки */
+.mod-card-container__title {
+	margin-bottom: calc(15px + 1vh);
+	font-size: 32px;
+	font-weight: 500;
+	color: #e2e2e2;
+}
+
+/* Описание возле карточки */
+.mod-card-container__subtitle {
+	margin-bottom: calc(25px + 1.7vh);
+	font-size: 20px;
+	/* color: #9ca3af; */
+	color: #D2D2D2;
+}
+
+/* Сама карточка */
+.mod-card {
+	width: 328px;
+	height: 294px;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+
+	border-radius: 37px;
+}
+
+@media (max-width: 1100px) {
+    .mod-grid {
+        grid-template-columns: 300px 300px 300px;
+    }
+
+	.mod-card-container {
+		max-width: 300px;
+	}
+
+	.mod-card {
+		width: 300px;
+	}
+
+} @media (max-width: 500px) {
+	.mod-grid {
+        display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+    }
+
+	.mod-card-container {
+		max-width: 350px;
+	}
+
+	.mod-card {
+		width: 350px;
+	}
+}
+
+/* Фон */
+/* -------------------- */
+/* задаётся внутри js-кода */
+/* -------------------- */
+
+/* Иконка */
+.mod-card__icon {
+	width: 52px;
+	height: 52px;
+	margin-bottom: 19px;
+	margin-top: 25px;
+}
+
+/* Название мода */
+.mod-card__name {
+	margin-bottom: 15px;
+	color: #F8FBFB;
+	font-size: 24px;
+	font-weight: 500;
+}
+
+/* Описание мода */
+.mod-card__desc {
+	max-width: 230px;
+	margin-bottom: 27px;
+
+	color: #7F8486;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+/* Ссылки */
+.mod-card__links {
+	display: flex;
+	align-items: center;
+	gap: 23px;
+}
+
+.mod-card__link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	
+	height: 30px;
+	width: 120px;
+	
+	font-size: 10px;
+	font-weight: 500;
+
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+.mod-card__link:nth-of-type(1) {
+	color: #262626;
+	background: #FBFBFA;
+}
+
+.mod-card__link:nth-of-type(2) {
+	background: linear-gradient(#2E2E32, #19191B);
+	color: #FBFBFA;
+	border: 1px solid #2e2e2e;
+}
+
+/* Иконка с цветом карточки */
+.btn__icon{
+	color: var(--card-color); 
+	font-size: 16px;
+}
+
+/* Подвал с метаданными */
+.mod-card__footer {
+	margin-top: calc(20px + 1vh);
+	display: flex;
+	justify-content: space-between;
+
+	font-size: 20px;
+	/* color: #9ca3af; */
+	color: #D2D2D2;
+}
+
+.mod-card__status {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+	text-transform: capitalize;
+}
+
+.mod-card__status-dot {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+}
+
+/* Цвета требовательности */
+.mod-card__status.low .mod-card__status-dot {
+  	background-color: #3BCB6D;
+}
+
+.mod-card__status.medium .mod-card__status-dot {
+  	background-color: #C98B45;
+}
+
+.mod-card__status.hard .mod-card__status-dot {
+  	background-color: #C94545;
+}
+
+.mod-card__status.req .mod-card__status-dot {
+  	background-color: #C7C7C7;
+}

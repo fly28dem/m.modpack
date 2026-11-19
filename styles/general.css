@@ -1,13 +1,32 @@
 /* ---- Шрифты ---------- */
 @import url('https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pixelify+Sans:wght@400..700&display=swap');
 
-/* Выделение текста */
+/* ---- Анимация прогрузки страниц ---- */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main, header {
+    opacity: 0;
+    animation: fadeIn 0.2s ease-out forwards;
+}
+
+/* ---- Выделение текста ----*/
 ::selection {
     background-color: #c1c5cc;
     color: #1E1F21;
 }
 
-/* Скролбар */
+/* ---- Скролбар ---- */
 ::-webkit-scrollbar {
     background-color: rgba(11, 12, 15, 1);
     border-left: 1px solid #313235;
@@ -41,6 +60,7 @@ body {
 .page-nav {
     position: sticky;
     top: 0;
+    z-index: 1;
 
     display: flex;
     justify-content: center;
@@ -99,6 +119,12 @@ body {
     transition-duration: 0.1s;
 }
 
+@media (max-width: 1100px) {
+    .logo-text-description {
+        display: none;
+    }
+}
+
 /* ---- Ссылки на страницы ---- */
 .nav-link__container {
 
@@ -155,6 +181,38 @@ body {
     font-size: 10px;
 
     user-select: none;
+}
+
+/* ---------------------- */
+/* -------- Шапка ------- */
+/* ---------------------- */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    /* gap: 2.5vh; */
+}
+
+.header__title {
+    color: #c4cad1;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: medium;
+}
+
+.header__mark {
+    background-image: radial-gradient(circle at center -250%, rgba(117, 123, 132, 1) 50%, rgba(237, 237, 237, 1) 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.header__description {
+    color: #c5cbd3;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 165%;
 }
 
 /* ---------------------- */
@@ -243,6 +301,58 @@ a:hover {
     filter: inherit;
 }
 
+
+
+/* Ссылка со статичной стрелочкой */
+
+.arrow-link {
+    color: #d3d7e2;
+    /* font-size: 13px; */
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.link-underline div {
+    display: inline-block;
+    padding-bottom: 0px;
+    border-bottom: 1px solid #6d6f74;
+    transition-duration: 0.1s;
+}
+
+.link-underline:hover div {
+    border-bottom: 1px solid #e5e6e9;
+    transition-duration: 0.1s;
+}
+
+.link-icon {
+    margin-left: 0.3%;
+}
+
+.link-icon span {
+    display: inline-block;
+    transform: rotate(-45deg);
+}
+
+/* Ссылка с динамичной стрелочкой */
+
+.base-link__text {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: inherit;
+}
+
+.base-link__arrow, .base-link:hover {
+    transition: 0.2s
+}
+
+.base-link__arrow {
+    transform: translate(-1px, 1px);
+}
+
+.base-link:hover .base-link__arrow {
+    transform: translate(0px, 0px);
+}
+
 /* ---------------------- */
 /* ------- Подвал ------- */
 /* ---------------------- */
@@ -252,12 +362,6 @@ a:hover {
     justify-content: center;
     margin-top: 7vh;
     padding: 0 3%;
-}
-
-@media (max-width: 1921px) {
-    .footer {
-        margin-top: 8.5vh;
-    }
 }
 
 .footer-container {
@@ -300,6 +404,17 @@ a:hover {
     color: #a3a6ac;
 }
 
+@media (max-width: 1921px) {
+    .footer {
+        margin-top: 8.5vh;
+    }
+} @media (max-width: 500px) {
+    .footer-container {
+        padding: 20px 0;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
 
 /* ---- Курсор ---- */
 .sword-follower {
@@ -317,21 +432,4 @@ a:hover {
     will-change: transform;
     /* для плавности */
     /* transition-duration: 0.15s; */
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-main, header {
-    opacity: 0;
-    animation: fadeIn 0.2s ease-out forwards;
 }

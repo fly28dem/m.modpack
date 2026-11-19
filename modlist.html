@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.Modpack — список модов</title>
+
+    <link rel="icon" href="./imgs/general/logo-img.png">
+
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/general.css">
+    <link rel="stylesheet" href="./styles/modlist.css">
+</head>
+
+<body>
+    <nav class="page-nav">
+        <div class="page-nav__container content-container">
+
+            <!-- Логотип и ссылка на главную -->
+            <a class="logo-container" href="./index.html">
+                <img src="./imgs/general/logo-img.png" alt="m.modpack logo" />
+                <div>
+                    <span class="logo-text logo-text-light">m.modpack</span><!--
+                    --><span class="logo-text logo-text-dark">.github.io</span>
+                </div>
+                <div>
+                    <span class="logo-text logo-text-description">all mods on one site</span>
+                </div>
+            </a>
+
+            <!-- Список ссылок справа -->
+            <ul class="nav-link__container">
+                <li><a href="./modpacks.html">modpacks</a></li>
+                <li><a href="./tutorial.html">tutorial</a></li>
+                <li><span class="logo-end">M.M</span></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="content-container">
+
+            <!-- Шапка -->
+            <header class="header">
+
+                <!-- Верхняя подпись -->
+                <span class="header__title">TECH • BUILD • RESEARCH • GROW</span>
+
+                <!-- Главный заголовок -->
+                <h1>TECHNOPIRATES<br><span class="header__mark">MODLIST</span></h1>
+
+                <!-- Описание -->
+                <span class="header__description">
+                    The list is divided into subcategories for convenience. The <br />
+                    build was created for three people and has no specific style <br />
+                    and balance.
+
+                    <!-- Ссылка на скачивание -->
+                    <a href="/modlist.html" class="base-link" download>
+                        <span class="base-link__text">Download</span>
+
+                        <!-- Стрелочка -->
+                        <img class="base-link__arrow" src="./imgs/general/link_arrow.png" alt="">
+                    </a>
+                </span>
+
+            </header>
+
+            <!-- Фильтры -->
+            <form class="filter">
+                <div class="filter__dropdowns">
+
+                    <!-- Фильтр Sectors -->
+                    <button type="button" class="filter-dropdown">
+                        <span>Sectors</span>
+                        <img class="button-icon" src="./imgs/modlist/list-arrow.png">
+                    </button>
+
+                    <!-- Фильтр Size -->
+                    <button type="button" class="filter-dropdown">
+                        <span>Size</span>
+                        <img class="button-icon" src="./imgs/modlist/list-arrow.png">
+                    </button>
+
+                    <!-- Фильтр Type -->
+                    <button type="button" class="filter-dropdown">
+                        <span>Type</span>
+                        <img class="button-icon" src="./imgs/modlist/list-arrow.png">
+                    </button>
+                </div>
+
+                <!-- Поле поиска -->
+                <div class="search-field">
+                    <img class="button-icon" src="./imgs/modlist/search-glass.png">
+                    <input class="search-input" placeholder="Search...">
+                </div>
+            </form>
+
+            <section class="mod-category" aria-labelledby="main-mods-title">
+
+                <!-- Категория "Главные моды" -->
+                <header class="mod-category__header">
+                    <p class="mod-category__eyebrow">Main mods</p>
+                    <h2 id="main-mods-title" class="mod-category__title">
+                        Essential for main<br>progression
+                    </h2>
+                </header>
+
+                <!-- Сетка модовых карточек -->
+                <div class="mod-grid" style="--card-color: #4D51ED">
+                    <!-- html-вёрстка здесь рендерится с помощью js -->
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="footer-container content-container">
+            <span>2026, Sergey Dergunov, M.Modpacks.</span>
+
+            <!-- Ссылки на соц. сети -->
+            <ul class="footer__social-media">
+                <li>
+                    <a href="https://www.instagram.com/___kaif.999?srtk=MW41cGZpYmdsbzZubA==">
+                        <span>instagram</span>
+                        <img src="./imgs/general/Inst 1.png" alt="instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://discord.com/users/1086365678929453169">
+                        <span>discord</span>
+                        <img src="./imgs/general/Discord 1.png" alt="discord">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://vk.com/id1122904090">
+                        <span>vkontakte</span>
+                        <img src="./imgs/general/Vk 1.png" alt="vkontakte">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://t.me/flydem28">
+                        <span>telegram</span>
+                        <img src="./imgs/general/Tg 1.png" alt="telegram">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Меч следующий за курсором -->
+    <div class="sword-follower"></div>
+
+    <!-- Скрипты -->
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/modlist.js"></script>
+</body>
+
+
+</html>
